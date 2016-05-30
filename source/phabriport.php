@@ -29,7 +29,7 @@ $output['subject'] = sprintf(
 foreach ($diffs as $key => $diff)
 {
     $dateModified = new DateTime(date("Y-m-d H:i:s", $diff['dateModified']));
-    $lastWeek = new DateTime(date("Y-m-d H:i:s", strval(strtotime('-7 day'))));
+    $lastWeek = new DateTime(date("Y-m-d H:i:s", strval(strtotime('-' . $config['days'] . ' day'))));
 
     if ($dateModified > $lastWeek)
     {
