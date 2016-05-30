@@ -35,17 +35,17 @@ foreach ($diffs as $key => $diff)
     {
         switch ($diff['status'])
         {
-            // 0 - Needs Review
+            // Needs Review
             case 0:
                 $output['ongoing'][] = "#" . $diff['id'] . " - " . $diff['title'] . "\n";
                 break;
 
-            // 2 - Accepted
+            // Accepted
             case 2:
                 $output['completed'][] = "#" . $diff['id'] . " - " . $diff['title'] . "\n";
                 break;
 
-            // 3 - Closed
+            // Closed
             case 3:
                 $output['completed'][] = "#" . $diff['id'] . " - " . $diff['title'] . "\n";
                 break;
