@@ -19,7 +19,7 @@ You can also set up a default email signature in AppleScript:
 
 The shortcut to execute the command is: **⇧ + ⌘ + p**.
 
-If you don't have Alfred, you can still run the **phabriport.php** file in the source folder and copy the result to your clipboard.
+If you don't have Alfred, you can still run the **phabriport.php** file in the source folder and pipe the result to your clipboard.
 
 
 About
