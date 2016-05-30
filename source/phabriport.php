@@ -6,7 +6,7 @@ date_default_timezone_set('Europe/Copenhagen');
 
 $config = parse_ini_file('config.ini');
 
-// Test: http://git.boozt-dev.com:8001/conduit/method/differential.query/
+// Test API: http://domain.com/conduit/method/differential.query/
 $api_parameters = [
     'authors'   => [$config['phid_user']],
     'order'     => 'order-modified',
