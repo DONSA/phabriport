@@ -5,7 +5,7 @@ The workflow uses Conduit API for Phabricator.
 In order to set it up, rename config-example.ini to config.ini and fill in all config options:
 - Url of your local instance of Phabricator (e.g. http://domain.com:port/)
 - Phabricator User ID (e.g. PHID-USER-egkpgr7pqa3ve57wa6lh)
-- API Token can be obtained through the Conduit API Tokens http://domain:port/settings/panel/apitokens/
+- API Token can be obtained through the Conduit API Tokens http://domain.com:port/settings/panel/apitokens/
 
 Import the workflow on Alfred.
 
