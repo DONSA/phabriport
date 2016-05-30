@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>phabriport</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>D380C39D-1A1C-4DD3-8547-DE2D8D0473B0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>79F514F4-91CD-4E56-9EBB-249E980B6DA9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D7C71A60-511A-4EFB-B683-E2818FB0EEB6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D380C39D-1A1C-4DD3-8547-DE2D8D0473B0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Nuno Lopes</string>
+	<key>description</key>
+	<string>Phabricator Report</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Phabriport</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+	set theRecipientName to "Platform"
+	set theRecipientAddress to "platform@boozt.com"
+
+	set array to (q) as string
+	set AppleScript's text item delimiters to "|"
+	set the itemsArray to every text item of the array
+	set theSubject to item 1 of itemsArray
+	set theBody to item 2 of itemsArray
+
+
+	tell application "Mail"
+
+		set newMessage to make new outgoing message with properties {subject:theSubject, content:theBody, visible:true}
+
+		set sender of newMessage to "Nuno Lopes &lt;nlo@boozt.com&gt;"
+		set message signature of newMessage to signature "Signature #1"
+
+        tell newMessage
+            make new to recipient with properties {name:theRecipientName, address:theRecipientAddress}
+        end tell
+
+	end tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>79F514F4-91CD-4E56-9EBB-249E980B6DA9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>35</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>P</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D7C71A60-511A-4EFB-B683-E2818FB0EEB6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>php phabriport.php</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D380C39D-1A1C-4DD3-8547-DE2D8D0473B0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>79F514F4-91CD-4E56-9EBB-249E980B6DA9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>D380C39D-1A1C-4DD3-8547-DE2D8D0473B0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>370</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>D7C71A60-511A-4EFB-B683-E2818FB0EEB6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
