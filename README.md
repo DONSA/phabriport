@@ -1,9 +1,7 @@
 # PHABRIPORT
 A workflow for Alfred 3.0 that generates a weekly report based on Phabricator differentials.
 
-The workflow uses Conduit API for Phabricator.
-In order to set it up, first import the workflow on Alfred.
-
+The workflow uses Conduit API for Phabricator. In order to set it up, first import the workflow on Alfred.
 Then open the installed package on finder or command line and rename config-example.ini to config.ini and fill in all config options:
 - Url of your local instance of Phabricator (e.g. http://domain.com:port/)
 - Phabricator User ID (e.g. PHID-USER-egkpgr7pqa3ve57wa6lh)
