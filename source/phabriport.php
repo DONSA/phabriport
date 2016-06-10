@@ -61,6 +61,6 @@ foreach ($diffs as $key => $diff)
 echo sprintf(
     "%s|Issues: none\n\nRisks: none\n\nCompleted:\n%s\nOngoing:\n%s\n\nPlaned:",
     $output['subject'],
-    implode("", $output['completed']),
-    implode("", $output['ongoing'])
+    implode("", array_filter($output['completed'])),
+    implode("", array_filter($output['ongoing']))
 );
